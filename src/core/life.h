@@ -4,7 +4,7 @@
 #define ROWS 25
 #define COLS 80
 
-//void life_init(int field[FIELD_ROWS][FIELD_COLS]);
+void life_next_state(int current_state, int neighbours);
 int life_count_neighbours(
     int field[FIELD_ROWS][FIELD_COLS], 
     int row, 
