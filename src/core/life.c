@@ -32,7 +32,7 @@ int life_count_neighbours(const int field[FIELD_ROWS][FIELD_COLS], int row,
     return result;
 }
 
-void life_next_generation(const int field[ROWS][COLS],
+void life_next_generation(const int field[FIELD_ROWS][FIELD_COLS],
                           int next[FIELD_ROWS][FIELD_COLS]) {
     for (int row = 0; row < FIELD_ROWS; row++) {
         for (int col = 0; col < FIELD_COLS; col++) {

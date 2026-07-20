@@ -6,13 +6,15 @@
 
 int life_next_state(int current_state, int neighbours);
 int life_count_neighbours(
-    int field[FIELD_ROWS][FIELD_COLS], 
+    const int field[FIELD_ROWS][FIELD_COLS], 
     int row, 
     int col
 );
 void life_next_generation(
-    int field[FIELD_ROWS][FIELD_COLS], 
+    const int field[FIELD_ROWS][FIELD_COLS], 
     int next[FIELD_ROWS][FIELD_COLS]
 );
+void life_copy_field(int field[FIELD_ROWS][FIELD_COLS],
+                     const int next[FIELD_ROWS][FIELD_COLS]);
 
 #endif
