@@ -26,8 +26,8 @@ int life_count_neighbours(
             // (i + ROWS) % ROWS - формула вычислений координаты соседа, которая 
             // не позволяет выйти за границы массива
             int current_cell = field[(i + ROWS) % ROWS][(j + COLS) % COLS];
-            if (current_cell == 1 && (i != row || j != col)) {
-                result++;
+            if (i != row || j != col) {
+                result += current_cell;
             }
         }
     }
@@ -40,15 +40,11 @@ void life_next_generation(
 ) {
     for (int row = 0; row < ROWS; row++) {
         for (int col = 0; col < COLS; col++) {
-            if (life_next_state(field[row][col], life_count_neighbours(
+            next[row][col] = life_next_state(field[row][col], life_count_neighbours(
                 field,
                 row,
                 col
-            )) == 1) {
-                next[row][col] = 1;
-            } else {
-                next[row][col] = 0;
-            }
+            ))
         }
     }
 }
