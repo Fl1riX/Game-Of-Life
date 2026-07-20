@@ -1,15 +1,15 @@
 #include "life.h"
 
-int life_next_state(int current_state, int neighbours) {
-    int result = 0;
+CellState life_next_state(CellState current_state, int neighbours) {
+    CellState result = CELL_DEAD;
 
-    if (current_state == 1) {
+    if (current_state == CELL_ALIVE) {
         if (neighbours == 2 || neighbours == 3) {
-            result = 1;
+            result = CELL_ALIVE;
         }
     } else {
         if (neighbours == 3) {
-            result = 1;
+            result = CELL_ALIVE;
         }
     }
     return result;
@@ -55,7 +55,7 @@ int is_game_finished(const int field[FIELD_ROWS][FIELD_COLS]) {
     int result = 1;
     for (int row = 0; row < FIELD_ROWS && result == 1; row++) {
         for (int col = 0; col < FIELD_COLS && result == 1; col++) {
-            if (field[row][col] == 1) {
+            if (field[row][col] == CELL_ALIVE) {
                 result = 0;
             }
         }
