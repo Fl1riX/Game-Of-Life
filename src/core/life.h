@@ -1,8 +1,8 @@
 #ifndef LIFE_H
 #define LIFE_H
 
-#define ROWS 25
-#define COLS 80
+#define FIELD_ROWS 25
+#define FIELD_COLS 80
 
 int life_next_state(int current_state, int neighbours);
 int life_count_neighbours(
