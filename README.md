@@ -13,7 +13,6 @@
   <img src="https://img.shields.io/badge/Platform-Linux-orange.svg" alt="Linux">
   <img src="https://img.shields.io/badge/License-MIT-purple.svg" alt="MIT">
   <img src="https://img.shields.io/badge/Terminal-ncurses-5cb85c">
-  <img src="https://img.shields.io/badge/School-21-black">
 </p>
 
 <p align="center">
@@ -30,8 +29,6 @@
 **Conway's Game of Life** is a terminal implementation of the famous cellular automaton written in **C11** using the **ncurses** library.
 
 The simulation is rendered directly in the terminal and supports real-time interaction, adjustable speed, and loading custom starting configurations.
-
-The project was written entirely from scratch as an independent implementation of one of the team projects from the **School 21** "pool."
 
 ---
 
@@ -171,8 +168,6 @@ This project is licensed under the MIT License.
 **Игра «Жизнь» Конвея** — терминальная реализация знаменитого клеточного автомата, написанная на **C11** с использованием библиотеки **ncurses**.
 
 Программа отображает эволюцию клеточного автомата прямо в терминале, позволяет изменять скорость симуляции во время выполнения и загружать собственные стартовые конфигурации.
-
-Проект полностью написан с нуля как самостоятельная реализация одного из командных проектов бассейна **Школы 21**.
 
 ---
 
