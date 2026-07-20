@@ -16,5 +16,6 @@ void life_next_generation(
 );
 void life_copy_field(int field[FIELD_ROWS][FIELD_COLS],
                      const int next[FIELD_ROWS][FIELD_COLS]);
+int is_game_finished(const int field[FIELD_ROWS][FIELD_COLS]);
 
 #endif

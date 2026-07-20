@@ -50,3 +50,15 @@ void life_copy_field(int field[FIELD_ROWS][FIELD_COLS],
         }
     }
 }
+
+int is_game_finished(const int field[FIELD_ROWS][FIELD_COLS]) {
+    int result = 1;
+    for (int row = 0; row < FIELD_ROWS && result == 1; row++) {
+        for (int col = 0; col < FIELD_COLS && result == 1; col++) {
+            if (field[row][col] == 1) {
+                result = 0;
+            }
+        }
+    }
+    return result;
+}
