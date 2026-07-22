@@ -1,5 +1,12 @@
 #include "input.h"
 
+#include <unistd.h>
+#include <stdio.h>
+
+static int read_preset(int field[FIELD_ROWS][FIELD_COLS]);
+static void init_field(int field[FIELD_ROWS][FIELD_COLS]);
+static void load_default_preset(int field[FIELD_ROWS][FIELD_COLS]);
+
 int get_input(int field[FIELD_ROWS][FIELD_COLS]) {
     int result = 1;
     init_field(field);
@@ -14,7 +21,7 @@ int get_input(int field[FIELD_ROWS][FIELD_COLS]) {
 }
 
 // Инициализация поля
-void init_field(int field[FIELD_ROWS][FIELD_COLS]) {
+static void init_field(int field[FIELD_ROWS][FIELD_COLS]) {
     for (int row = 0; row < FIELD_ROWS; row++) {
         for (int col = 0; col < FIELD_COLS; col++) {
             field[row][col] = CELL_DEAD;
@@ -22,8 +29,8 @@ void init_field(int field[FIELD_ROWS][FIELD_COLS]) {
     }
 }
 
-void load_default_preset(int field[FIELD_ROWS][FIELD_COLS]) {
-    const int glider[3][3] = {// Шаблон глайдера
+static void load_default_preset(int field[FIELD_ROWS][FIELD_COLS]) {
+    static const int glider[3][3] = {// Шаблон глайдера
                               {0, 1, 0},
                               {0, 0, 1},
                               {1, 1, 1}};
@@ -46,7 +53,7 @@ void load_default_preset(int field[FIELD_ROWS][FIELD_COLS]) {
     }
 }
 
-int read_preset(int field[FIELD_ROWS][FIELD_COLS]) {
+static int read_preset(int field[FIELD_ROWS][FIELD_COLS]) {
     int result = 1;
     int value;
 
