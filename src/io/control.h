@@ -1,9 +1,9 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 
-#define GAME_DELAY_STEP 500
-#define GAME_MIN_DELAY 500
-#define GAME_MAX_DELAY 2000
+#define GAME_DELAY_STEP 100
+#define GAME_MIN_DELAY 100
+#define GAME_MAX_DELAY 600
 
 int get_buttons(int* delay);
 
