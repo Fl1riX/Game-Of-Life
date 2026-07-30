@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -std=c11 -Isrc/io -Isrc/core
+CFLAGS = -Wall -Werror -Wextra -std=c11 -Isrc/io -Isrc/core -lncurses
 SRC = src/core/life.c \
 		 src/io/control.c \
 		 src/io/display.c \
