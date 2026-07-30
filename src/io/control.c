@@ -4,7 +4,7 @@ int get_buttons(int *delay) {
     int result = 1;
     int pressed_button = getch();
 
-    switch ((char)pressed_button) {
+    switch (pressed_button) {
         case 'a':
             if (*delay > GAME_MIN_DELAY) {
                 *delay -= GAME_DELAY_STEP;
