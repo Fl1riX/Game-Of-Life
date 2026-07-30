@@ -16,6 +16,9 @@ int get_input(int field[FIELD_ROWS][FIELD_COLS]) {
         load_default_preset(field);
     } else {
         result = read_preset(field);
+        if (freopen("/dev/tty", "r", stdin) == NULL) {
+            result = 0;
+        }
     }
     return result;
 }
