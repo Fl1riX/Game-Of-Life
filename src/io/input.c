@@ -1,7 +1,7 @@
 #include "input.h"
 
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 
 static int read_preset(int field[FIELD_ROWS][FIELD_COLS]);
 static void init_field(int field[FIELD_ROWS][FIELD_COLS]);
@@ -31,9 +31,9 @@ static void init_field(int field[FIELD_ROWS][FIELD_COLS]) {
 
 static void load_default_preset(int field[FIELD_ROWS][FIELD_COLS]) {
     static const int glider[3][3] = {// Шаблон глайдера
-                              {0, 1, 0},
-                              {0, 0, 1},
-                              {1, 1, 1}};
+                                     {0, 1, 0},
+                                     {0, 0, 1},
+                                     {1, 1, 1}};
 
     const int preset_rows = sizeof(glider) / sizeof(glider[0]);
     // 3 * 3 * 4 = 36. 3 строки по 3 элемента int(4 байта) = 36байт

@@ -1,6 +1,6 @@
 #include "control.h"
 
-int get_buttons(int *delay) {
+int get_buttons(int* delay) {
     int result = 1;
     int pressed_button = getch();
 
@@ -11,7 +11,7 @@ int get_buttons(int *delay) {
             }
             break;
         case 'z':
-            if ( *delay < GAME_MAX_DELAY) {
+            if (*delay < GAME_MAX_DELAY) {
                 *delay += GAME_DELAY_STEP;
             }
             break;
@@ -23,4 +23,3 @@ int get_buttons(int *delay) {
     }
     return result;
 }
-
