@@ -1,5 +1,13 @@
 #include "display.h"
 
+void init_display() {
+    initscr();              // передаем управление терминалом ncurses
+    cbreak();               //  клавиши приходя сразу без нажатия enter
+    noecho();               //  не показываем нажатые кнопки
+    nodelay(stdscr, TRUE);  // делаем запрос кнопки не блокирующим
+    curs_set(0);            // скрываем курсор
+}
+
 void display_game(const int field[FIELD_ROWS][FIELD_COLS]) {
     for (int row = 0; row < FIELD_ROWS; row++) {
         for (int col = 0; col < FIELD_COLS; col++) {
