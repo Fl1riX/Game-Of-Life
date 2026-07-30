@@ -11,6 +11,6 @@ void display_game(const int field[FIELD_ROWS][FIELD_COLS]) {
         }
     }
     mvprintw(FIELD_ROWS + 1, 0, "Press buttons:\n");
-    mvprintw(FIELD_ROWS + 1, 0, "A/Z - To change the game speed\n");
-    mvprintw(FIELD_ROWS + 1, 0, "Space - Quit game");
+    mvprintw(FIELD_ROWS + 2, 0, "A/Z - To change the game speed\n");
+    mvprintw(FIELD_ROWS + 3, 0, "Space - Quit game");
 }
