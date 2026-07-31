@@ -132,7 +132,7 @@ The Game of Life follows four simple rules:
 
 ## 🖼️ Preview
 
-> Coming soon...
+![game demo](game_demo/game_of_life.gif)
 
 ---
 
@@ -271,7 +271,7 @@ make clean
 
 ## 🖼️ Скриншоты
 
-> В процессе
+![game demo](game_demo/game_of_life.gif)
 
 ---
 
