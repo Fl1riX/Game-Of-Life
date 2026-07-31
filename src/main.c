@@ -19,7 +19,6 @@ int main(void) {
         clear();
         display_game(field);
         refresh();
-        game_run = get_buttons(&delay);
 
         if (game_run != 0) {
             life_next_generation(field, next);
@@ -29,7 +28,10 @@ int main(void) {
                 game_run = 0;
             }
         }
-        napms(delay);
+        for (int i = 0; i <= delay && game_run == 1; i+=20) {
+            game_run = get_buttons(&delay);
+            napms(20);
+        }
     }
     endwin();
     return 0;
